@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>Pinboard</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>CFBundleIdentifier</key>
 	<string>nbjahan.launchbar.pinboard</string>
 	<key>CFBundleIconFile</key>
