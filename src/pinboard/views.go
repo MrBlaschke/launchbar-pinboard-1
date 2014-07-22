@@ -7,12 +7,7 @@ import (
 	. "github.com/nbjahan/go-launchbar"
 )
 
-func updateCache(c *Context) {
-	if c.Action.IsControlKey() {
-		c.Config.Set("refresh", 0)
-		c.Action.ShowView(c.Config.GetString("view"))
-		return
-	}
+func updateCache() {
 
 	done := make(chan struct{}, 3)
 	v := pb.Config.GetString("view")
@@ -35,7 +30,14 @@ func init() {
 	i.SetOrder(9997)
 	i.SetIcon("Alert")
 	i.SetMatch(MatchIfTrueFunc(pb.Config.GetInt("refresh") > 0))
-	i.SetRun(updateCache)
+	i.SetRun(func(c *Context) {
+		if c.Action.IsControlKey() {
+			c.Config.Set("refresh", 0)
+			c.Action.ShowView(c.Config.GetString("view"))
+			return
+		}
+		updateCache()
+	})
 
 	v.NewItem(fmt.Sprintf("Executed in: %v", time.Since(start))).
 		SetSubtitle(fmt.Sprintf("%0.3f seconds", float64(time.Since(start))/float64(time.Second))).

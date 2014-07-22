@@ -28,9 +28,10 @@ func init() {
 			c.Action.ShowView("loginfailed")
 			return
 		}
+		c.Config.Set("view", "main")
 		c.Config.Set("loggedin", true)
 		c.Config.Set("token", token)
-		updateCache(c)
+		updateCache()
 		// c.Action.ShowView("main")
 	})
 

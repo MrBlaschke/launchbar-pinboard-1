@@ -36,9 +36,10 @@ func init() {
 			c.Action.ShowView("error")
 			return
 		}
+		c.Config.Set("view", "main")
 		c.Config.Set("loggedin", true)
 		c.Config.Set("token", c.Input.String())
-		updateCache(c)
+		updateCache()
 		// c.Action.ShowView("main")
 	})
 	i = v.NewItem("Pinboard: Enter Username")
