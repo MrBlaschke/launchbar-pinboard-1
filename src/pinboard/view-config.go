@@ -74,7 +74,7 @@ func init() {
 	i.SetRender(func(c *Context) {
 		version := pb.Config.GetString("newversion")
 		if version != "" {
-			c.Self.SetSubtitle(fmt.Sprintf("latest version: %q, you have: %q", version, pb.Version()))
+			c.Self.SetSubtitle(fmt.Sprintf("latest version: v%q (I'm: v%q)", version, pb.Version()))
 		} else {
 			c.Self.SetSubtitle("click to check")
 		}
