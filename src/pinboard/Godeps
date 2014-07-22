@@ -1,0 +1,7 @@
+github.com/bitly/go-simplejson 3378bdcb5cebedcbf8b5750edee28010f128fe24
+github.com/nbjahan/go-launchbar 7b7503e5287530f3bef609ed1dac54e323ea470b
+github.com/nbjahan/go-pinboard 39ec4c19bcbc4c3281f49f81c2bc6e734e91b3fb
+github.com/codegangsta/inject 37512bbe41b4cc579cdd706742efc7bf34f94b06
+github.com/nbjahan/gofuzz d05d7638d11741277dac2d4be0a4e49ce589d9d8
+github.com/PuerkitoBio/goquery v0.3.2
+code.google.com/p/cascadia 890de327fd65c76968fd5705d2126a19ef332ec5

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Pinboard Browse</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>nbjahan.launchbar.pinboard-browse</string>
+	<key>CFBundleIconFile</key>
+	<string>Pinboard.icns</string>
+	<key>LBDebugLogEnabled</key>
+	<false/>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBScriptName</key>
+			<string>pinboard</string>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>LBDescription</key>
+	<dict>
+	  <key>LBAuthor</key>
+	  <string>Nima Jahanshahi</string>
+	  <key>LBEmail</key>
+	  <string>nbjahan@gmail.com</string>
+	  <key>LBSummary</key>
+	  <string>This extension offers complete solution to browse pinboard</string>
+	  <key>LBTwitter</key>
+	  <string>@nbjahan</string>
+	  <key>LBWebsite</key>
+	  <string>http://github.com/nbjahan/launchbar-pinboard</string>
+	</dict>
+</dict>
+</plist>

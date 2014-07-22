@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key>
+  <string>Pinboard for LaunchBar 6</string>
+  <key>CFBundleVersion</key>
+  <string>1.0.0</string>
+  <key>LBDescription</key>
+  <dict>
+    <key>LBAuthor</key>
+    <string>Nima Jahanshahi</string>
+    <key>LBEmail</key>
+    <string>nbjahan@gmail.com</string>
+    <key>LBSummary</key>
+    <string>This extension offers complete solution to manage and browse your pinboard account</string>
+    <key>LBTwitter</key>
+    <string>@nbjahan</string>
+    <key>LBWebsite</key>
+    <string>http://github.com/nbjahan/launchbar-pinboard</string>
+  </dict>
+</dict>
+</plist>
