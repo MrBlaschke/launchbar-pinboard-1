@@ -65,7 +65,9 @@ func init() {
 		c.Config.Delete("totalposts")
 		c.Config.Delete("error")
 
-		c.Cache.Clean()
+		c.Cache.Delete("my-recent")
+		c.Cache.Delete("my-tags")
+		c.Cache.Delete("my-posts")
 
 		c.Action.ShowView("main")
 	})
@@ -74,7 +76,7 @@ func init() {
 	i.SetRender(func(c *Context) {
 		version := pb.Config.GetString("newversion")
 		if version != "" {
-			c.Self.SetSubtitle(fmt.Sprintf("latest version: v%q (I'm: v%q)", version, pb.Version()))
+			c.Self.SetSubtitle(fmt.Sprintf("latest version: v%s (I'm: v%s)", version, pb.Version()))
 		} else {
 			c.Self.SetSubtitle("click to check")
 		}
@@ -98,13 +100,13 @@ func init() {
 		} else {
 			c.Config.Set("newversion", version)
 			if c.Action.Version().Cmp(Version(version)) < 0 {
-				dl := fmt.Sprintf("https://github.com/nbjahan/launchbar-pinboard/releases/download/v%s/Pinboard-%s.lbext",version,version)
+				dl := fmt.Sprintf("https://github.com/nbjahan/launchbar-pinboard/releases/download/v%s/Pinboard-%s.lbext", version, version)
 				v.NewItem(fmt.Sprintf("Download New version v%s (I'm v%s)", version, c.Action.Version())).
 					SetIcon("/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/ToolbarDownloadsFolderIcon.icns").
 					SetURL(dl).SetSubtitle(dl).SetAction("")
 			} else {
 				v.NewItem("I'm up to date!").SetAction("").
-					SetSubtitle(fmt.Sprintf("latest version is %s, I'm %s", version, c.Action.Version())).
+					SetSubtitle(fmt.Sprintf("latest version is %s (I'm %s)", version, c.Action.Version())).
 					SetIcon("at.obdev.LaunchBar:GreenCheckmark")
 			}
 		}
